@@ -1,0 +1,19 @@
+{
+  "name": "Facebook Friends download",
+  "version": "1",
+  "manifest_version": 2,
+  "description": "Scarica una lista amici in un file CSV",
+  "background": {
+	  "scripts" : ["jquery.min.js", "background.js"]
+	},
+  "browser_action": {
+    "name": "Manipulate DOM",
+    "icons": ["icon.png"],
+    "default_icon": "icon.png"
+  },
+  "permissions": ["activeTab"],
+  "content_scripts": [ {
+    "js": [ "jquery.min.js", "background.js" ],
+    "matches": [ "http://*/*", "https://*/*"]
+  }]
+}
